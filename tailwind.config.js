@@ -1,21 +1,31 @@
 module.exports = {
-  mode: "jit",
   content: ["./src/**/*.js", "./src/**/**/*.js", "./public/*.html"],
   theme: {
     extend: {
       fontFamily: {
-        'bellefair': ["bellefair", "san-serif"],
-        'barlow': ["barlow", "san-serif"],
+        bellefair: ["bellefair", "san-serif"],
+        barlow: ["barlow", "san-serif"],
         "barlow-condensed": ["barlow condensed", "san-serif"],
       },
       colors: {
-        'dark': "#0C0E18",
-        'fog': "#d2d8f9",
+        dark: "#0C0E18",
+        fog: "#d2d8f9",
         "half-transparent": "rgba(255, 255, 255, 0.5)",
       },
       screens: {
-        
-      }
+        tablet: "(min-height: 435px)",
+      },
+      screens: {
+        tablet: {
+          min: "435px",
+        },
+        laptop: {
+          min: "755px",
+        },
+        desktop: {
+          min: "1080px",
+        },
+      },
     },
   },
   plugins: [],

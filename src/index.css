@@ -1,22 +1,33 @@
-@import url(https://fonts.googleapis.com/css?family=Bellefair:regular);
-@import url(https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Barlow:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import url(https://fonts.googleapis.com/css?family=Bellefair:regular);
+@import url(https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Barlow:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
 .modal {
   backdrop-filter: blur(80px);
-  background-color: rgba(255, 255, 255, 0.2);  
+  background-color: rgba(255, 255, 255, 0.041);  
 }
 
 #root {
   background-image: url('./assets/home/background-home-mobile.jpg');
-  /* height: 100vh; */
   background-size: cover;
-  /* width: 100vw; */
   padding: 0.02px;
   width: 100%;
   background-repeat: no-repeat;
+  /* border: 2px solid red; */
+  min-height: 100vh;
+}
+@media (min-width: 435px) {
+  #root {
+    background-image: url('./assets/home/background-home-tablet.jpg');
+  }
+}
+@media (min-width: 755px) {
+  #root {
+    background-image: url('./assets/home/background-home-desktop.jpg');
+  }
 }
