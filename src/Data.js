@@ -1,10 +1,15 @@
+import moon from "./components/assets/destination/image-moon.webp"
+import mars from "./components/assets/destination/image-mars.webp"
+import europa from "./components/assets/destination/image-europa.webp"
+import titan from "./components/assets/destination/image-titan.webp"
+
 const data = {
   destinations: [
     {
       name: "MOON",
       images: {
         png: "./assets/destination/image-moon.png",
-        webp: "/static/media/image-moon.b5a3c90e9c8eeb2cb68d.webp",
+        webp: moon,
       },
       description:
         "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
@@ -12,37 +17,37 @@ const data = {
       travel: "3 DAYS",
     },
     {
-      name: "Mars",
+      name: "MARS",
       images: {
         png: "./assets/destination/image-mars.png",
-        webp: "/static/media/image-mars.7f55f721b4a64b7a56a8.webp",
+        webp: mars,
       },
       description:
         "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
-      distance: "225 mil. km",
-      travel: "9 months",
+      distance: "225 MIL. KM",
+      travel: "9 M0NTHS",
     },
     {
-      name: "Europa",
+      name: "EUROPA",
       images: {
         png: "./assets/destination/image-europa.png",
-        webp: "/static/media/image-europa.c3be32383f31d0f76d96.webp",
+        webp: europa,
       },
       description:
         "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
-      distance: "628 mil. km",
-      travel: "3 years",
+      distance: "628 MIL. KM",
+      travel: "3 YEARS",
     },
     {
-      name: "Titan",
+      name: "TITAN",
       images: {
         png: "./assets/destination/image-titan.png",
-        webp: "/static/media/image-titan.80738bc61e5d1217a19a.webp",
+        webp: titan,
       },
       description:
         "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
-      distance: "1.6 bil. km",
-      travel: "7 years",
+      distance: "1.6 BIL. KM",
+      travel: "7 YEARS",
     },
   ],
   crew: [

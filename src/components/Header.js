@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "./assets/shared/logo.svg";
 import menu from "./assets/shared/icon-hamburger.svg";
 import close from "./assets/shared/icon-close.svg";
+
+const Nav = ["home", "destination", "crew", "technology"];
 
 function Header() {
   const [menuOn, setMenuOn] = useState(false);
@@ -10,6 +12,19 @@ function Header() {
   const triggerMenuHandler = () => {
     setMenuOn((prevState) => !prevState);
   };
+
+  const navigation = Nav.map((nav) => {
+    return (
+      <li onClick={triggerMenuHandler} key={nav}>
+        <NavLink
+          to={nav}
+          className={({ isActive }) => (isActive ? "pr-12 border-r-4" : "")}
+        >
+          {nav.toUpperCase()}
+        </NavLink>
+      </li>
+    );
+  });
 
   return (
     <header>
@@ -27,7 +42,7 @@ function Header() {
           <ul
             className={`${
               menuOn ? "flex" : "hidden"
-            } backdrop-blur-md modal list-[decimal-leading-zero] fixed top-0 right-0 list-inside p-1 pt-36 pl-6 h-full w-full max-w-[18rem] flex-col gap-6 laptop:flex laptop:flex-row laptop:static laptop:p-0 laptop:max-w-none laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:py-8 desktop:gap-12 desktop:pl-16`}
+            } text-white backdrop-blur-md modal list-[decimal-leading-zero] fixed top-0 right-0 list-inside p-1 pt-36 pl-6 pr-6 h-full w-full max-w-[18rem] flex-col gap-6 laptop:flex laptop:flex-row laptop:static laptop:p-0 laptop:max-w-none laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:py-8 desktop:gap-12 desktop:pl-16`}
           >
             <img
               onClick={triggerMenuHandler}
@@ -35,14 +50,7 @@ function Header() {
               src={close}
               alt="exit menu"
             />
-            <Link to="/home">
-              <li onClick={triggerMenuHandler} id='0' className="text-white pl-1">HOME</li>
-            </Link>
-            <Link to="/destination">
-              <li onClick={triggerMenuHandler} id='1' className="text-white pl-1">DESTINATION</li>
-            </Link>
-            <li onClick={triggerMenuHandler} id='2' className="text-white pl-1">CREW</li>
-            <li onClick={triggerMenuHandler} id='3' className="text-white pl-1">TECHNOLOGY</li>
+            {navigation}
           </ul>
         </nav>
       </div>
