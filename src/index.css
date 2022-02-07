@@ -13,7 +13,8 @@
 }
 
 #root {
-  background-image: url('./assets/home/background-home-mobile.jpg');
+  /* background-image: url('./components/assets/home/background-home-mobile.jpg'); */
+  background-image: url('./components/assets/destination/background-destination-mobile.jpg');
   background-size: cover;
   padding: 0.02px;
   width: 100%;
@@ -23,11 +24,11 @@
 }
 @media (min-width: 435px) {
   #root {
-    background-image: url('./assets/home/background-home-tablet.jpg');
+    background-image: url('./components/assets/home/background-home-tablet.jpg');
   }
 }
 @media (min-width: 755px) {
   #root {
-    background-image: url('./assets/home/background-home-desktop.jpg');
+    background-image: url('./components/assets/home/background-home-desktop.jpg');
   }
 }

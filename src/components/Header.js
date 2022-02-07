@@ -1,7 +1,8 @@
 import { useState } from "react";
-import logo from "../assets/shared/logo.svg";
-import menu from "../assets/shared/icon-hamburger.svg";
-import close from "../assets/shared/icon-close.svg";
+import { Link } from "react-router-dom";
+import logo from "./assets/shared/logo.svg";
+import menu from "./assets/shared/icon-hamburger.svg";
+import close from "./assets/shared/icon-close.svg";
 
 function Header() {
   const [menuOn, setMenuOn] = useState(false);
@@ -11,13 +12,18 @@ function Header() {
   };
 
   return (
-    <header className="">
-      <div className="flex justify-between items-center w-10/12 mx-auto my-8 laptop:w-full laptop:my-10">
+    <header>
+      <div className="flex justify-between items-center w-10/12 mx-auto my-8 laptop:w-full laptop:my-10 desktop:max-w-9xl">
         <div className="w-10 laptop:ml-[10%] desktop:w-14">
           <img className="w-full" src={logo} alt="logo" />
         </div>
         <nav className="desktop:w-[65%] desktop:max-w-[52rem]">
-          <img className='laptop:hidden' src={menu} alt="open menu" onClick={triggerMenuHandler} />
+          <img
+            className="laptop:hidden"
+            src={menu}
+            alt="open menu"
+            onClick={triggerMenuHandler}
+          />
           <ul
             className={`${
               menuOn ? "flex" : "hidden"
@@ -29,10 +35,14 @@ function Header() {
               src={close}
               alt="exit menu"
             />
-            <li className="text-white pl-1">HOME</li>
-            <li className="text-white pl-1">DESTINATION</li>
-            <li className="text-white pl-1">CREW</li>
-            <li className="text-white pl-1">TECHNOLOGY</li>
+            <Link to="/home">
+              <li onClick={triggerMenuHandler} id='0' className="text-white pl-1">HOME</li>
+            </Link>
+            <Link to="/destination">
+              <li onClick={triggerMenuHandler} id='1' className="text-white pl-1">DESTINATION</li>
+            </Link>
+            <li onClick={triggerMenuHandler} id='2' className="text-white pl-1">CREW</li>
+            <li onClick={triggerMenuHandler} id='3' className="text-white pl-1">TECHNOLOGY</li>
           </ul>
         </nav>
       </div>
