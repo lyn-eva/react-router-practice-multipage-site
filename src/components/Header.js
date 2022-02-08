@@ -16,24 +16,23 @@ function Header() {
   const navigation = Nav.map((nav) => {
     return (
       <NavLink
+        key={nav}
         to={nav}
         className={({ isActive }) =>
           isActive
-            ? "laptop:p-0 laptop:border-0 laptop:border-b-2 border-r-4 pr-12"
+            ? "border-r-4 pr-12 laptop:border-0 laptop:border-b-[3px] laptop:p-0"
             : ""
         }
       >
-        <li onClick={triggerMenuHandler} key={nav}>
-          {nav.toUpperCase()}
-        </li>
+        <li onClick={triggerMenuHandler}>{nav.toUpperCase()}</li>
       </NavLink>
     );
   });
 
   return (
     <header>
-      <div className="laptop:w-full laptop:my-10 desktop:max-w-9xl mx-auto my-8 flex w-10/12 items-center justify-between">
-        <div className="laptop:ml-[10%] desktop:w-14 w-10">
+      <div className="desktop:max-w-9xl mx-auto my-8 flex w-10/12 items-center justify-between laptop:my-10 laptop:w-full">
+        <div className="w-10 laptop:ml-[10%] desktop:w-14 desktop:ml-28">
           <img className="w-full" src={logo} alt="logo" />
         </div>
         <nav className="desktop:w-[65%] desktop:max-w-[52rem]">
@@ -46,11 +45,11 @@ function Header() {
           <ul
             className={`${
               menuOn ? "flex" : "hidden"
-            } modal laptop:flex laptop:flex-row laptop:static laptop:p-0 laptop:max-w-none laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:py-8 desktop:gap-12 desktop:pl-16 fixed top-0 right-0 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 p-1 pt-36 pl-6 pr-6 text-white backdrop-blur-md`}
+            } modal fixed top-0 right-0 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 p-1 pt-36 pl-6 pr-6 text-white backdrop-blur-md laptop:static laptop:flex laptop:max-w-none laptop:flex-row laptop:p-0 laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:gap-12 desktop:py-8 desktop:pl-16`}
           >
             <img
               onClick={triggerMenuHandler}
-              className="laptop:hidden fixed top-10 right-8 w-4"
+              className="fixed top-10 right-8 w-4 laptop:hidden"
               src={close}
               alt="exit menu"
             />

@@ -6,15 +6,14 @@
 @import url(https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Barlow:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-
 .modal {
   backdrop-filter: blur(80px);
-  background-color: rgba(255, 255, 255, 0.041);  
+  background-color: rgba(255, 255, 255, 0.041);
 }
 
 #root {
   /* background-image: url('./components/assets/home/background-home-mobile.jpg'); */
-  background-image: url('./components/assets/destination/background-destination-mobile.jpg');
+  background-image: url("./components/assets/destination/background-destination-mobile.jpg");
   background-size: cover;
   padding: 0.02px;
   width: 100%;
@@ -24,11 +23,11 @@
 }
 @media (min-width: 435px) {
   #root {
-    background-image: url('./components/assets/home/background-home-tablet.jpg');
+    background-image: url("./components/assets/home/background-home-tablet.jpg");
   }
 }
 @media (min-width: 755px) {
   #root {
-    background-image: url('./components/assets/home/background-home-desktop.jpg');
+    background-image: url("./components/assets/destination/background-destination-desktop.jpg");
   }
 }

@@ -1,7 +1,7 @@
-import moon from "./components/assets/destination/image-moon.webp"
-import mars from "./components/assets/destination/image-mars.webp"
-import europa from "./components/assets/destination/image-europa.webp"
-import titan from "./components/assets/destination/image-titan.webp"
+import moon from "./components/assets/destination/image-moon.webp";
+import mars from "./components/assets/destination/image-mars.webp";
+import europa from "./components/assets/destination/image-europa.webp";
+import titan from "./components/assets/destination/image-titan.webp";
 
 const data = {
   destinations: [
