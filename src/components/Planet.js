@@ -1,6 +1,4 @@
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
-import { Outlet } from "react-router";
 import { destinations } from "../Data";
 
 function Planet() {
@@ -9,7 +7,7 @@ function Planet() {
   return (
     <div className="mt-16 w-10/12 mx-auto text-white text-center text-2xl font-barlow-condensed mb-16">
       <div className="w-4/5 mx-auto">
-        <img src={destinations[parem.id].images.webp} alt={destinations[parem.id].name} />
+        <img className='w-full' src={destinations[parem.id].images.webp} alt={destinations[parem.id].name} />
       </div>
 
       <div className="mt-12">

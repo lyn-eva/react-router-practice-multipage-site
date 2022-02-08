@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="home" element={<Home />} />
         <Route path="destination" element={<Destination />}>
+          {/* <Route path="destination/:id" element={<Destination />} /> */}
           <Route path=":id/:planet" element={<Planet />} />
         </Route>
         <Route path="/" element={<Navigate to="home" />} />

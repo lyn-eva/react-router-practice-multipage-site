@@ -1,54 +1,36 @@
-import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
-import { Outlet } from "react-router";
-// import Planet from "../Planet";
+import { Outlet, useNavigate } from "react-router";
+import { useEffect } from "react";
 
 function Destination() {
-  // const parem = useParams()
-  // console.log(parem);
+  const redirect = useNavigate();
+  useEffect(() => {
+    redirect("0/moon");
+  }, [])
+
+
+  const subNav = ["moon", "mars", "europa", "titan"];
+  const subNavigation = subNav.map((nav, i) => {
+    return (
+      <li key={nav}>
+        <NavLink
+          to={`${i}/${nav}`}
+          className={({ isActive }) => (isActive ? "border-b-2" : "")}
+        >
+          {nav.toUpperCase()}
+        </NavLink>
+      </li>
+    );
+  });
 
   return (
-    <div className="text-white text-center text-2xl font-barlow-condensed mt-8">
+    <div className="font-barlow-condensed mt-8 text-center text-2xl text-white">
       <h1>
         <span className="text-fog mr-4">01</span> PICK YOUR DESTINATION
       </h1>
       <nav className="mt-8">
-        <ul className="flex justify-between gap-3 text-[1.2rem] tracking-widest max-w-[18rem] mx-auto">
-          <li>
-            <NavLink
-              to="0/moon"
-              className={({ isActive }) => (isActive ? "border-b-2" : "")}
-            >
-              MOON
-            </NavLink>
-          </li>
-          <li>
-            {" "}
-            <NavLink
-              to="1/mars"
-              className={({ isActive }) => (isActive ? "border-b-2" : "")}
-            >
-              MARS
-            </NavLink>
-          </li>
-          <li>
-            {" "}
-            <NavLink
-              to="2/europa"
-              className={({ isActive }) => (isActive ? "border-b-2" : "")}
-            >
-              EUROPA
-            </NavLink>
-          </li>
-          <li>
-            {" "}
-            <NavLink
-              to="3/titan"
-              className={({ isActive }) => (isActive ? "border-b-2" : "")}
-            >
-              TITAN
-            </NavLink>
-          </li>
+        <ul className="mx-auto flex max-w-[18rem] justify-between gap-3 text-[1.2rem] tracking-widest">
+          {subNavigation}
         </ul>
       </nav>
       <Outlet />
