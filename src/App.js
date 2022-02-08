@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Home from "./components/layout/Home";
 import Destination from "./components/layout/Destination";
 import Planet from "./components/Planet";
+import Crew from "./components/layout/Crew";
+import Biography from "./components/Biography";
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
         <Route path="home" element={<Home />} />
         <Route path="destination" element={<Destination />}>
           <Route path=":id/:planet" element={<Planet />} />
+        </Route>
+        <Route path="crew" element={<Crew />}>
+          <Route path=":id" element={<Biography />} />
         </Route>
         <Route path="/" element={<Navigate to="home" />} />
       </Routes>

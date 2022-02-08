@@ -15,24 +15,26 @@ function Header() {
 
   const navigation = Nav.map((nav) => {
     return (
-      <NavLink
-        key={nav}
-        to={nav}
-        className={({ isActive }) =>
-          isActive
-            ? "border-r-4 pr-12 laptop:border-0 laptop:border-b-[3px] laptop:p-0"
-            : ""
-        }
-      >
-        <li onClick={triggerMenuHandler}>{nav.toUpperCase()}</li>
-      </NavLink>
+      <li className="text-lg" onClick={triggerMenuHandler}>
+        <NavLink
+          key={nav}
+          to={nav}
+          className={({ isActive }) =>
+            isActive
+              ? "relative before:absolute before:-left-6 before:top-1 before:h-4 before:w-48 before:border-r-4 before:content-[''] laptop:before:top-6 laptop:before:h-0 laptop:before:w-[calc(100%+1.5rem)] laptop:before:border-b-2 laptop:before:border-r-0"
+              : ""
+          }
+        >
+          {nav.toUpperCase()}
+        </NavLink>
+      </li>
     );
   });
 
   return (
     <header>
-      <div className="desktop:max-w-9xl mx-auto my-8 flex w-10/12 items-center justify-between laptop:my-10 laptop:w-full">
-        <div className="w-10 laptop:ml-[10%] desktop:w-14 desktop:ml-28">
+      <div className="desktop:max-w-9xl mx-auto my-8 flex w-10/12 items-center justify-between laptop:my-10 laptop:w-full desktop:my-12">
+        <div className="w-10 laptop:ml-[10%] desktop:ml-28 desktop:w-14">
           <img className="w-full" src={logo} alt="logo" />
         </div>
         <nav className="desktop:w-[65%] desktop:max-w-[52rem]">
@@ -45,7 +47,7 @@ function Header() {
           <ul
             className={`${
               menuOn ? "flex" : "hidden"
-            } modal fixed top-0 right-0 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 p-1 pt-36 pl-6 pr-6 text-white backdrop-blur-md laptop:static laptop:flex laptop:max-w-none laptop:flex-row laptop:p-0 laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:gap-12 desktop:py-8 desktop:pl-16`}
+            } modal fixed top-0 right-0 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 p-1 pt-36 pl-6 pr-6 font-barlow-condensed tracking-wider text-white backdrop-blur-md laptop:static laptop:flex laptop:max-w-none laptop:flex-row laptop:p-0 laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:gap-14 desktop:py-9 desktop:pl-20`}
           >
             <img
               onClick={triggerMenuHandler}
