@@ -1,5 +1,3 @@
-import React from "react";
-
 function Home() {
   return (
     <main className="desktop:max-w-9xl mx-auto mt-14 w-10/12 laptop:mt-32 laptop:flex laptop:justify-between laptop:gap-2 desktop:mt-32 desktop:mb-16 desktop:gap-[15%]">

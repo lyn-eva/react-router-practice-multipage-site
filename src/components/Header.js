@@ -15,9 +15,8 @@ function Header() {
 
   const navigation = Nav.map((nav) => {
     return (
-      <li className="text-lg" onClick={triggerMenuHandler}>
+      <li key={nav} className="text-lg" onClick={triggerMenuHandler}>
         <NavLink
-          key={nav}
           to={nav}
           className={({ isActive }) =>
             isActive

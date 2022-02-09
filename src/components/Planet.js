@@ -18,7 +18,7 @@ function Planet() {
           <h2 className="font-bellefair text-6xl desktop:text-[7rem]">
             {destinations[parem.id].name}
           </h2>
-          <p className="mt-8 font-barlow text-[1rem] text-fog tablet:mx-auto tablet:max-w-md tablet:text-lg tablet:leading-8 laptop:max-w-lg desktop:max-w-md">
+          <p className="mt-8 font-barlow text-[1rem] text-fog tablet:mx-auto tablet:max-w-md tablet:text-lg tablet:leading-8 laptop:max-w-lg desktop:max-w-md desktop:text-left">
             {destinations[parem.id].description}
           </p>
         </div>
