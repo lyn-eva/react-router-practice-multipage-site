@@ -24,7 +24,7 @@ function Destination() {
 
   return (
     <main className="mt-8 text-center font-barlow-condensed text-2xl text-white  laptop:mx-auto laptop:mt-20 laptop:w-4/5 laptop:text-left desktop:mt-0 desktop:text-3xl">
-      <h1>
+      <h1 className='tracking-wide'>
         <span className="mr-4 text-fog">01</span> PICK YOUR DESTINATION
       </h1>
       <nav className="mt-8 laptop:mt-12">

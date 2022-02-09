@@ -5,7 +5,7 @@ function Biography() {
   const { id } = useParams();
 
   return (
-    <main className="mx-auto mt-8 w-11/12 laptop:flex laptop:flex-col-reverse desktop:mt-16 desktop:w-full desktop:flex-row-reverse desktop:justify-between desktop:gap-12">
+    <div className="mx-auto mt-8 w-11/12 laptop:flex laptop:flex-col-reverse desktop:mt-16 desktop:w-full desktop:flex-row-reverse desktop:justify-between desktop:gap-12">
       <div className="mx-auto w-10/12 max-w-sm laptop:mt-12 desktop:mt-0">
         <img
           className="w-full"
@@ -23,11 +23,11 @@ function Biography() {
             {crew[id].name}
           </h2>
         </div>
-        <p className="mt-3 text-[1rem] font-light leading-7 tablet:text-lg tablet:leading-8 laptop:mt-6 laptop:text-xl laptop:leading-9 laptop:tracking-wide desktop:mt-8 desktop:text-2xl desktop:font-extralight desktop:leading-10">
+        <p className="mt-3 text-[1rem] font-light leading-7 tablet:text-lg tablet:leading-8 laptop:mt-6 laptop:text-xl laptop:leading-9 laptop:tracking-wide desktop:mt-8 desktop:text-xl desktop:font-extralight desktop:leading-10">
           {crew[id].bio}
         </p>
       </div>
-    </main>
+    </div>
   );
 }
 

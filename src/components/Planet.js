@@ -2,24 +2,24 @@ import { useParams } from "react-router";
 import { destinations } from "../Data";
 
 function Planet() {
-  const parem = useParams();
+  const {id} = useParams();
 
   return (
     <div className="mx-auto mt-16 mb-16 w-10/12 text-center font-barlow-condensed text-2xl text-white desktop:mt-8 desktop:flex desktop:w-full desktop:items-center desktop:justify-between desktop:gap-28">
       <div className="mx-auto w-4/5 max-w-[20rem] desktop:mb-8 desktop:max-w-sm">
         <img
           className="w-full"
-          src={destinations[parem.id].images.webp}
-          alt={destinations[parem.id].name}
+          src={destinations[id].images.webp}
+          alt={destinations[id].name}
         />
       </div>
       <div>
         <div className="mt-12 laptop:mt-16 desktop:mt-0">
           <h2 className="font-bellefair text-6xl desktop:text-[7rem]">
-            {destinations[parem.id].name}
+            {destinations[id].name}
           </h2>
-          <p className="mt-8 font-barlow text-[1rem] text-fog tablet:mx-auto tablet:max-w-md tablet:text-lg tablet:leading-8 laptop:max-w-lg desktop:max-w-md desktop:text-left">
-            {destinations[parem.id].description}
+          <p className="mt-8 font-barlow text-[1rem] text-fog tablet:mx-auto tablet:max-w-md tablet:text-lg tablet:leading-8 laptop:max-w-lg desktop:max-w-md desktop:text-left desktop:text-xl">
+            {destinations[id].description}
           </p>
         </div>
         <hr
@@ -32,7 +32,7 @@ function Planet() {
               AVG. DISTANCE
             </p>
             <span className="font-bellefair text-4xl">
-              {destinations[parem.id].distance}
+              {destinations[id].distance}
             </span>
           </div>
           <div className="">
@@ -40,7 +40,7 @@ function Planet() {
               EST. TRAVEL TIME
             </p>
             <span className="font-bellefair text-4xl">
-              {destinations[parem.id].travel}
+              {destinations[id].travel}
             </span>
           </div>
         </div>

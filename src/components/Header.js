@@ -46,7 +46,7 @@ function Header() {
           <ul
             className={`${
               menuOn ? "flex" : "hidden"
-            } modal fixed top-0 right-0 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 p-1 pt-36 pl-6 pr-6 font-barlow-condensed tracking-wider text-white backdrop-blur-md laptop:static laptop:flex laptop:max-w-none laptop:flex-row laptop:p-0 laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:gap-14 desktop:py-9 desktop:pl-20`}
+            } modal fixed top-0 right-0 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 p-1 pt-36 pl-6 pr-6 font-barlow-condensed tracking-wider text-white backdrop-blur-md laptop:static laptop:flex laptop:max-w-none laptop:flex-row laptop:p-0 laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:gap-14 desktop:py-9 desktop:pl-20 z-10`}
           >
             <img
               onClick={triggerMenuHandler}
