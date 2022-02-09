@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { destinations } from "../Data";
 
 function Planet() {
-  const {id} = useParams();
+  const { id } = useParams();
 
   return (
     <div className="mx-auto mt-16 mb-16 w-10/12 text-center font-barlow-condensed text-2xl text-white desktop:mt-8 desktop:flex desktop:w-full desktop:items-center desktop:justify-between desktop:gap-28">

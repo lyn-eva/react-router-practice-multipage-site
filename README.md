@@ -1,1 +1,1 @@
-- surprisingly, I learnt a lot.
+- holy cow!, I learned a lot.

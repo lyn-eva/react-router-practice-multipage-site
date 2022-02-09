@@ -25,7 +25,7 @@ function Crew() {
 
   return (
     <main className="relative mt-8 text-center font-barlow-condensed text-2xl text-white  laptop:mx-auto laptop:mt-20 laptop:w-4/5 laptop:text-left desktop:mt-0 desktop:mb-20 desktop:text-3xl">
-      <h1 className='tracking-wide'>
+      <h1 className="tracking-wide">
         <span className="mr-4 text-fog">02</span> MEET YOUR CREW
       </h1>
       <nav className="top-72 left-1/2 mt-8 laptop:absolute laptop:-translate-x-1/2 desktop:left-0 desktop:top-12 desktop:translate-x-0">

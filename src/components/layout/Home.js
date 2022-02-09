@@ -4,8 +4,8 @@ import { useNavigate } from "react-router";
 function Home() {
   const redirect = useNavigate();
   const clickHandler = () => {
-    redirect('destination');
-  }
+    redirect("../destination");
+  };
 
   return (
     <main className="desktop:max-w-9xl mx-auto mt-14 w-10/12 laptop:mt-32 laptop:flex laptop:justify-between laptop:gap-2 desktop:mt-32 desktop:mb-16 desktop:gap-[15%]">
@@ -24,7 +24,10 @@ function Home() {
         </p>
       </div>
       <div className="mt-12 grid place-items-center py-8 tablet:my-10 laptop:w-[35%]">
-        <button onClick={clickHandler} className="h-40 w-40 rounded-full bg-white font-bellefair text-2xl desktop:mt-12 desktop:mr-20 desktop:h-52 desktop:w-52">
+        <button
+          onClick={clickHandler}
+          className="h-40 w-40 rounded-full bg-white font-bellefair text-2xl desktop:mt-12 desktop:mr-20 desktop:h-52 desktop:w-52"
+        >
           EXPLORE
         </button>
       </div>

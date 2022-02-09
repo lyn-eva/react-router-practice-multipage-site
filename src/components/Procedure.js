@@ -27,7 +27,7 @@ function Procedure() {
           alt={technology[id - 1].name}
         />
       </div>
-      <div className="mt-12 laptop:mt-16 desktop:mt-0 desktop:text-left desktop:ml-[12%]">
+      <div className="mt-12 laptop:mt-16 desktop:mt-0 desktop:ml-[12%] desktop:text-left">
         <span className="text-lg tracking-wider text-fog">
           THE TERMINOLOGY...
         </span>
