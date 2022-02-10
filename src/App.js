@@ -15,18 +15,63 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Suspense fallback={<p className='fixed left-1/2 top-1/2 -translate-x-1/2 text-2xl'>Loading ...</p>}>
+      <Suspense
+        fallback={
+          <p className="fixed left-1/2 top-1/2 -translate-x-1/2 text-2xl">
+            Loading ...
+          </p>
+        }
+      >
         <Routes>
           <Route path="/" element={<Navigate to="home" />} />
           <Route path="home" element={<Home />} />
           <Route path="destination" element={<Destination />}>
-            <Route path=":id/:planet" element={<Planet />} />
+            <Route
+              path=":id/:planet"
+              element={
+                <Suspense
+                  fallback={
+                    <p className="fixed left-1/2 top-1/2 -translate-x-1/2 text-2xl">
+                      Loading planets ...
+                    </p>
+                  }
+                >
+                  <Planet />
+                </Suspense>
+              }
+            />
           </Route>
           <Route path="crew" element={<Crew />}>
-            <Route path=":id" element={<Biography />} />
+            <Route
+              path=":id"
+              element={
+                <Suspense
+                  fallback={
+                    <p className="fixed left-1/2 top-1/2 -translate-x-1/2 text-2xl">
+                      Loading bio ...
+                    </p>
+                  }
+                >
+                  <Biography />
+                </Suspense>
+              }
+            />
           </Route>
           <Route path="technology" element={<Technology />}>
-            <Route path=":id" element={<Procedure />} />
+            <Route
+              path=":id"
+              element={
+                <Suspense
+                  fallback={
+                    <p className="fixed left-1/2 top-1/2 -translate-x-1/2 text-2xl">
+                      Loading Steps ...
+                    </p>
+                  }
+                >
+                  <Procedure />
+                </Suspense>
+              }
+            />
           </Route>
         </Routes>
       </Suspense>
