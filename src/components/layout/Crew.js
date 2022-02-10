@@ -2,11 +2,12 @@ import { Outlet, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
+const subNav = ["0", "1", "2", "3"];
+
 function Crew() {
   const redirect = useNavigate();
   useEffect(() => redirect("0"), []);
 
-  const subNav = ["0", "1", "2", "3"];
   const subNavigation = subNav.map((nav) => {
     return (
       <li

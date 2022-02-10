@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "./assets/shared/logo.svg";
 import menu from "./assets/shared/icon-hamburger.svg";
 import close from "./assets/shared/icon-close.svg";
@@ -34,7 +34,9 @@ function Header() {
     <header className="absolute w-full">
       <div className="desktop:max-w-9xl mx-auto my-8 flex w-10/12 items-center justify-between laptop:my-10 laptop:w-full desktop:my-12">
         <div className="w-10 laptop:ml-[10%] desktop:ml-28 desktop:w-14">
-          <img className="w-full" src={logo} alt="logo" />
+          <Link to="home">
+            <img className="w-full" src={logo} alt="logo" />
+          </Link>
         </div>
         <nav className="desktop:w-[65%] desktop:max-w-[52rem]">
           <img

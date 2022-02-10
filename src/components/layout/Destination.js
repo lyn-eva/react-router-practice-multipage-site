@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom";
 import { Outlet, useNavigate } from "react-router";
 import { useEffect } from "react";
 
+const subNav = ["moon", "mars", "europa", "titan"];
 function Destination() {
   const redirect = useNavigate();
   useEffect(() => {
     redirect("0/moon"); // lifesaver
   }, []);
 
-  const subNav = ["moon", "mars", "europa", "titan"];
   const subNavigation = subNav.map((nav, i) => {
     return (
       <li key={nav}>

@@ -2,13 +2,14 @@ import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 
+const subNav = ["1", "2", "3"];
+
 function Technology() {
   const redirect = useNavigate();
   useEffect(() => {
     redirect("1");
   }, []);
 
-  const subNav = ["1", "2", "3"];
   const subNavigation = subNav.map((nav) => {
     return (
       <li key={nav} className="text-lg hover:cursor-pointer desktop:text-2xl">

@@ -14,7 +14,7 @@ function Biography() {
         />
         <hr className="laptop:hidden" />
       </div>
-      <div className="my-8 mx-auto max-w-md text-center laptop:mt-2 laptop:max-w-lg desktop:ml-0 desktop:mt-28 desktop:max-w-[29rem] desktop:text-left">
+      <div className="my-8 mx-auto max-w-md text-center laptop:mt-2 laptop:max-w-lg desktop:ml-0 desktop:mt-20 desktop:max-w-[29rem] desktop:text-left">
         <div className="font-bellefair">
           <h3 className="text-[1rem] text-fog tablet:text-xl laptop:text-2xl desktop:text-3xl">
             {crew[id].role}

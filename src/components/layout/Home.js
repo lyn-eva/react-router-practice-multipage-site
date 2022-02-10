@@ -14,7 +14,7 @@ function Home() {
           <h1 className="font-barlow text-lg font-medium tracking-widest tablet:text-xl desktop:text-2xl">
             SO, YOU WANT TO TRAVEL TO
           </h1>
-          <span className="mt-6 mb-4 inline-block font-bellefair text-7xl font-light text-white tablet:mt-10 tablet:mb-6 tablet:text-8xl desktop:mt-12 desktop:mb-8 desktop:text-[8.5rem]">
+          <span className="mt-6 mb-4 inline-block font-bellefair text-7xl text-white tablet:mt-10 tablet:mb-6 tablet:text-8xl desktop:mt-12 desktop:mb-8 desktop:text-[8.5rem]">
             SPACE
           </span>
           <p className="font-barlow-condensed text-[1rem] font-light leading-7 tracking-wide tablet:text-lg desktop:text-left desktop:text-xl desktop:leading-9 desktop:tracking-wide">
