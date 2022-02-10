@@ -27,16 +27,18 @@ function Technology() {
   });
 
   return (
-    <main className="relative mt-8 text-center font-barlow-condensed text-2xl text-white  laptop:mx-auto laptop:mt-20 laptop:w-4/5 laptop:text-left desktop:mt-0 desktop:mb-20 desktop:text-3xl">
-      <h1 className="tracking-wide">
-        <span className="mr-4 text-fog">03</span> SPACE LAUNCH 101
-      </h1>
-      <nav className="mt-8 desktop:absolute">
-        <ul className="flex justify-center gap-8 desktop:flex-col desktop:gap-16">
-          {subNavigation}
-        </ul>
-      </nav>
-      <Outlet />
+    <main className="min-h-screen bg-technology-sm bg-cover bg-no-repeat p-[0.02px] tablet:bg-technology-md desktop:bg-technology-lg">
+      <div className="relative mt-28 text-center font-barlow-condensed text-2xl text-white  laptop:mx-auto laptop:mt-48 laptop:w-4/5 laptop:text-left desktop:mb-20 desktop:text-3xl">
+        <h1 className="tracking-wide">
+          <span className="mr-4 text-fog">03</span> SPACE LAUNCH 101
+        </h1>
+        <nav className="mt-8 desktop:absolute desktop:mt-12">
+          <ul className="flex justify-center gap-6 desktop:flex-col desktop:gap-16">
+            {subNavigation}
+          </ul>
+        </nav>
+        <Outlet />
+      </div>
     </main>
   );
 }

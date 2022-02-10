@@ -31,7 +31,7 @@ function Header() {
   });
 
   return (
-    <header>
+    <header className="absolute w-full">
       <div className="desktop:max-w-9xl mx-auto my-8 flex w-10/12 items-center justify-between laptop:my-10 laptop:w-full desktop:my-12">
         <div className="w-10 laptop:ml-[10%] desktop:ml-28 desktop:w-14">
           <img className="w-full" src={logo} alt="logo" />
@@ -46,7 +46,7 @@ function Header() {
           <ul
             className={`${
               menuOn ? "flex" : "hidden"
-            } modal fixed top-0 right-0 z-10 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 p-1 pt-36 pl-6 pr-6 font-barlow-condensed tracking-wider text-white backdrop-blur-md laptop:static laptop:flex laptop:max-w-none laptop:flex-row laptop:p-0 laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:gap-14 desktop:py-9 desktop:pl-20`}
+            }  fixed top-0 right-0 z-10 h-full w-full max-w-[18rem] list-inside list-[decimal-leading-zero] flex-col gap-6 bg-[rgba(255,255,255,0.04)] p-1 pt-36 pl-6 pr-6 font-barlow-condensed tracking-wider text-white backdrop-blur-[80px] laptop:static laptop:flex laptop:max-w-none laptop:flex-row laptop:p-0 laptop:py-6 laptop:pl-8 laptop:pr-16 desktop:gap-14 desktop:py-9 desktop:pl-20`}
           >
             <img
               onClick={triggerMenuHandler}

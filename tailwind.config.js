@@ -26,6 +26,32 @@ module.exports = {
           min: "1080px",
         },
       },
+      backgroundImage: {
+        "home-sm":
+          'url("/src/components/assets/home/background-home-mobile.jpg")',
+        "home-md":
+          'url("/src/components/assets/home/background-home-tablet.jpg")',
+        "home-lg":
+          'url("/src/components/assets/home/background-home-desktop.jpg")',
+        "destination-sm":
+          'url("/src/components/assets/destination/background-destination-mobile.jpg")',
+        "destination-md":
+          'url("/src/components/assets/destination/background-destination-tablet.jpg")',
+        "destination-lg":
+          'url("/src/components/assets/destination/background-destination-desktop.jpg")',
+        "crew-sm":
+          'url("/src/components/assets/crew/background-crew-mobile.jpg")',
+        "crew-md":
+          'url("/src/components/assets/crew/background-crew-tablet.jpg")',
+        "crew-lg":
+          'url("/src/components/assets/crew/background-crew-desktop.jpg")',
+        "technology-sm":
+          'url("/src/components/assets/technology/background-technology-mobile.jpg")',
+        "technology-md":
+          'url("/src/components/assets/technology/background-technology-tablet.jpg")',
+        "technology-lg":
+          'url("/src/components/assets/technology/background-technology-desktop.jpg")',
+      },
     },
   },
   plugins: [],

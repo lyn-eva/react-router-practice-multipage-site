@@ -5,8 +5,9 @@ import { technology } from "../Data";
 function Procedure() {
   const { id } = useParams();
   const [resize, setResize] = useState(false);
-
+  // two hooks just to change the image lol
   useEffect(() => {
+    setResize(window.innerWidth > 1079);
     const resizeHandler = () => {
       setResize(window.innerWidth > 1079);
     };
@@ -16,10 +17,8 @@ function Procedure() {
     };
   }, []);
 
-  console.log(resize);
-
   return (
-    <div className="mx-auto mt-16 mb-16 w-10/12 text-center font-barlow-condensed text-2xl text-white desktop:mt-8 desktop:flex desktop:w-full desktop:flex-row-reverse desktop:justify-between desktop:gap-28">
+    <div className="mx-auto mt-16 mb-16 w-10/12 text-center font-barlow-condensed text-2xl text-white desktop:mt-12 desktop:flex desktop:w-full desktop:flex-row-reverse desktop:justify-between desktop:gap-28">
       <div className="mx-auto max-w-[20rem] laptop:max-w-md desktop:mb-8 desktop:max-w-sm">
         <img
           className="w-full"
