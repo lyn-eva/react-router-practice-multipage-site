@@ -1,2 +1,1 @@
-- holy cow!, I learned a lot.
 - no animation or transition, Sorry :)
