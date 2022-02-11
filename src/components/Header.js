@@ -40,7 +40,7 @@ function Header() {
         </div>
         <nav className="desktop:w-[65%] desktop:max-w-[52rem]">
           <img
-            className="laptop:hidden"
+            className="laptop:hidden hover:cursor-pointer"
             src={menu}
             alt="open menu"
             onClick={triggerMenuHandler}
@@ -52,7 +52,7 @@ function Header() {
           >
             <img
               onClick={triggerMenuHandler}
-              className="fixed top-10 right-8 w-4 laptop:hidden"
+              className="fixed top-10 right-8 w-4 laptop:hidden hover:cursor-pointer"
               src={close}
               alt="exit menu"
             />
