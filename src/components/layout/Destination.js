@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Outlet, useNavigate } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 const subNav = ["moon", "mars", "europa", "titan"];
 function Destination() {
@@ -9,18 +9,22 @@ function Destination() {
     redirect("0/moon"); // lifesaver
   }, []);
 
-  const subNavigation = subNav.map((nav, i) => {
-    return (
-      <li key={nav}>
-        <NavLink
-          to={`${i}/${nav}`}
-          className={({ isActive }) => (isActive ? "border-b-2" : "")}
-        >
-          {nav.toUpperCase()}
-        </NavLink>
-      </li>
-    );
-  });
+  const subNavigation = useMemo(
+    () =>
+      subNav.map((nav, i) => {
+        return (
+          <li key={nav}>
+            <NavLink
+              to={`${i}/${nav}`}
+              className={({ isActive }) => (isActive ? "border-b-2" : "")}
+            >
+              {nav.toUpperCase()}
+            </NavLink>
+          </li>
+        );
+      }),
+    []
+  );
 
   return (
     <main className="min-h-screen bg-destination-sm bg-cover bg-no-repeat p-[0.02px] tablet:bg-destination-md desktop:bg-destination-lg">

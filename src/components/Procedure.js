@@ -5,7 +5,7 @@ import { technology } from "../Data";
 function Procedure() {
   const { id } = useParams();
   const [resize, setResize] = useState(false);
-  // two hooks just to change the image lol
+  // two hooks just to optimize the image, lol
   useEffect(() => {
     setResize(window.innerWidth > 1079);
     const resizeHandler = () => {

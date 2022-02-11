@@ -1,31 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { Outlet, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 
 const subNav = ["1", "2", "3"];
-
 function Technology() {
   const redirect = useNavigate();
   useEffect(() => {
     redirect("1");
   }, []);
 
-  const subNavigation = subNav.map((nav) => {
-    return (
-      <li key={nav} className="text-lg hover:cursor-pointer desktop:text-2xl">
-        <NavLink
-          to={nav}
-          className={({ isActive }) =>
-            isActive
-              ? "block h-12 w-12 rounded-full bg-white pt-2 text-center text-dark desktop:h-20 desktop:w-20 desktop:pt-5"
-              : "block h-12 w-12 rounded-full border-[1px] pt-2 text-center desktop:h-20 desktop:w-20 desktop:pt-5"
-          }
-        >
-          {nav}
-        </NavLink>
-      </li>
-    );
-  });
+  const subNavigation = useMemo(
+    () =>
+      subNav.map((nav) => {
+        return (
+          <li
+            key={nav}
+            className="text-lg hover:cursor-pointer desktop:text-2xl"
+          >
+            <NavLink
+              to={nav}
+              className={({ isActive }) =>
+                isActive
+                  ? "block h-12 w-12 rounded-full bg-white pt-2 text-center text-dark desktop:h-20 desktop:w-20 desktop:pt-5"
+                  : "block h-12 w-12 rounded-full border-[1px] pt-2 text-center desktop:h-20 desktop:w-20 desktop:pt-5"
+              }
+            >
+              {nav}
+            </NavLink>
+          </li>
+        );
+      }),
+    []
+  );
 
   return (
     <main className="min-h-screen bg-technology-sm bg-cover bg-no-repeat p-[0.02px] tablet:bg-technology-md desktop:bg-technology-lg">

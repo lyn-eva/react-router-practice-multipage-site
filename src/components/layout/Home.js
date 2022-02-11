@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
+import { useCallback } from "react";
 
 function Home() {
   const redirect = useNavigate();
-  const clickHandler = () => {
+  const clickHandler = useCallback(() => {
     redirect("../destination");
-  };
+  });
 
   return (
     <main className="min-h-screen bg-home-sm bg-cover bg-no-repeat p-[0.02px] tablet:bg-home-md desktop:bg-home-lg">

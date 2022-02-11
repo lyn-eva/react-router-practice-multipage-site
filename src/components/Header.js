@@ -1,23 +1,23 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "./assets/shared/logo.svg";
 import menu from "./assets/shared/icon-hamburger.svg";
 import close from "./assets/shared/icon-close.svg";
 
 const Nav = ["home", "destination", "crew", "technology"];
-
 function Header() {
   const [menuOn, setMenuOn] = useState(false);
 
-  const triggerMenuHandler = () => {
+  const triggerMenuHandler = useCallback(() => {
     setMenuOn((prevState) => !prevState);
-  };
+  });
 
   const navigation = Nav.map((nav) => {
     return (
-      <li key={nav} className="text-lg" onClick={triggerMenuHandler}>
+      <li key={nav} className="text-lg">
         <NavLink
           to={nav}
+          onClick={triggerMenuHandler}
           className={({ isActive }) =>
             isActive
               ? "relative before:absolute before:-left-6 before:top-1 before:h-4 before:w-48 before:border-r-4 before:content-[''] laptop:before:top-6 laptop:before:h-0 laptop:before:w-[calc(100%+1.5rem)] laptop:before:border-b-2 laptop:before:border-r-0"

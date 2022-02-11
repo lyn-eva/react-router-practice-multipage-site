@@ -1,14 +1,13 @@
 import { Outlet, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 const subNav = ["0", "1", "2", "3"];
-
 function Crew() {
   const redirect = useNavigate();
   useEffect(() => redirect("0"), []);
 
-  const subNavigation = subNav.map((nav) => {
+  const subNavigation = useMemo(() => subNav.map((nav) => {
     return (
       <li
         key={nav}
@@ -22,7 +21,7 @@ function Crew() {
         ></NavLink>
       </li>
     );
-  });
+  }),[]);
 
   return (
     <main className="min-h-screen bg-crew-sm bg-cover bg-no-repeat p-[0.02px] tablet:bg-crew-md desktop:bg-crew-lg">
